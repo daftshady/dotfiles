@@ -1,0 +1,6 @@
+[user]
+	email = daftonshady@gmail.com
+	name = daftshady
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
