@@ -49,6 +49,7 @@ syntax on
 set hlsearch
 set ruler
 set term=xterm-256color
+set cursorline
 colorscheme molokai
 let g:rehash256 = 1
 set backspace=indent,eol,start
