@@ -9,10 +9,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'dyng/ctrlsf.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,8 +37,9 @@ autocmd Filetype coffeescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype jade setlocal ts=2 sw=2 sts=0 expandtab
 
 " for c/cpp files, 2 spaces
-autocmd Filetype cpp setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype c setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype cpp setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype cc setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype c setlocal ts=4 sw=4 sts=0 expandtab
 
 set nu
 set autoindent
@@ -65,7 +65,7 @@ if version >= 702
   end
 
 "Remove trailing whitespace
-autocmd BufWritePre *.py,*.txt,*.cpp,*.c :%s/\s\+$//e
+autocmd BufWritePre *.py,*.txt,*.cpp,*.c,*.cc :%s/\s\+$//e
 
 "Remove tab
 autocmd BufWritePre *.py :%s/\t/    /e
@@ -86,15 +86,6 @@ au BufEnter,BufRead * call HiTabs()
 cabbrev nt NERDTree
 let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 
-"indent guide"
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-
-"ctrlsf"
-let g:ctrlsf_ackprg = 'ag'
-cabbrev cs CtrlSF
-
 "youcompleteme"
 let g:ycm_autoclose_preview_window_after_completion = 1
 set completeopt-=preview
-
