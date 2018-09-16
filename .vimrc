@@ -12,6 +12,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'itchyny/lightline.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -27,20 +29,6 @@ set softtabstop=4
 set shiftwidth=4
 set smartindent
 
-" for html/rb files, 2 spaces
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-
-" for js/coffee/jade files, 4 spaces
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype coffeescript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype jade setlocal ts=2 sw=2 sts=0 expandtab
-
-" for c/cpp files, 2 spaces
-autocmd Filetype cpp setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype cc setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype c setlocal ts=4 sw=4 sts=0 expandtab
-
 set nu
 set autoindent
 set ai
@@ -53,6 +41,7 @@ set cursorline
 colorscheme molokai
 let g:rehash256 = 1
 set backspace=indent,eol,start
+set laststatus=2
 
 autocmd BufRead,BufNewFile *.c,*.h set smartindent
 
@@ -84,8 +73,12 @@ au BufEnter,BufRead * call HiTabs()
 "nerdtree"
 "autocmd VimEnter * NERDTree
 cabbrev nt NERDTree
+map <C-o> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 
 "youcompleteme"
 let g:ycm_autoclose_preview_window_after_completion = 1
 set completeopt-=preview
+
+"ctrlp"
+let g:ctrlp_prompt_mappings = { 'PrtExit()': ['<esc>'] }
