@@ -14,6 +14,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'itchyny/lightline.vim'
 Plugin 'editorconfig/editorconfig-vim'
+" sudo apt-get install ack-grep "
+Plugin 'dyng/ctrlsf.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
