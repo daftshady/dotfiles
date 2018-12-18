@@ -86,3 +86,6 @@ set completeopt-=preview
 "ctrlp"
 let g:ctrlp_prompt_mappings = { 'PrtExit()': ['<esc>'] }
 let g:ctrlp_working_path_mode = 0
+
+"ctrlsf"
+cabbrev cs CtrlSF
