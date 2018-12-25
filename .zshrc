@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/daftshady/.oh-my-zsh
+export ZSH=/home/ilsu/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -84,11 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/ilsu/dev/Ipopt-3.12.9/lib:$LD_LIBRARY_PATH
 alias ns=nvidia-smi
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/daftshady/.vimpkg/bin
-echo -ne "\e]1;Anton\a"
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ilsu/.vimpkg/bin
+echo -ne "\e]1;Mars\a"
 alias py=python3
 
 alias gs="git status"
@@ -101,5 +101,36 @@ setopt menu_complete
 plugins=(… zsh-completions)
 autoload -U compinit && compinit
 
-alias python3=python3.6
-alias pip3=pip3.6
+alias python3=python3.7
+alias pip3=pip3.7
+
+alias vol=/media/vol
+
+source /opt/ros/kinetic/setup.zsh
+source ~/catkin_ws/devel/setup.zsh
+
+export LD_PRELOAD="/usr/lib/libtcmalloc_minimal.so.4"
+
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export CUDA_PATH=/usr/local/cuda
+export CUDA_HOME=/usr/local/cuda-10.0
+export LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+alias trago="python3 launch.py --debug=True --autoreload=True"
+alias segtrain="python3 -m perception.segmentation.run_segmentation_training"
+
+# -- Improved X11 forwarding through GNU Screen (or tmux).
+# If not in screen or tmux, update the DISPLAY cache.
+# If we are, update the value of DISPLAY to be that in the cache.
+# This is run before every command.
+function preexec() {
+    if [ -z "$STY" -a -z "$TMUX" ]; then
+        echo $DISPLAY > ~/.display.txt
+    else
+        export DISPLAY=`cat ~/.display.txt`
+    fi
+}
