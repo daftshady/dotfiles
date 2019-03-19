@@ -109,8 +109,6 @@ alias vol=/media/vol
 source /opt/ros/kinetic/setup.zsh
 source ~/catkin_ws/devel/setup.zsh
 
-export LD_PRELOAD="/usr/lib/libtcmalloc_minimal.so.4"
-
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export CUDA_PATH=/usr/local/cuda
 export CUDA_HOME=/usr/local/cuda-10.0
