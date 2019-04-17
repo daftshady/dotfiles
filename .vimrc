@@ -46,6 +46,7 @@ let g:rehash256 = 1
 set backspace=indent,eol,start
 set laststatus=2
 set scrolloff=10
+set incsearch
 
 autocmd BufRead,BufNewFile *.c,*.h set smartindent
 
