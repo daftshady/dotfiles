@@ -60,14 +60,14 @@ if version >= 702
   end
 
 "Remove trailing whitespace
-autocmd BufWritePre *.py,*.txt,*.cpp,*.c,*.cc :%s/\s\+$//e
+autocmd BufWritePre *.py,*.cpp,*.c,*.cc,*.js :%s/\s\+$//e
 
 "Remove tab
 autocmd BufWritePre *.py :%s/\t/    /e
 
 "line length limit"
-au BufWinEnter *.py,*.js,*.c let w:m1=matchadd('Search', '\%<81v.\%>79v', -1)
-au BufWinEnter *.py,*.js,*.c let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter *.py,*.js,*.c,*.cc,*.cpp let w:m1=matchadd('Search', '\%<81v.\%>79v', -1)
+au BufWinEnter *.py,*.js,*.c,*.cc,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 "Tab highlighting"
 function! HiTabs()
