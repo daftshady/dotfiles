@@ -47,7 +47,7 @@ set backspace=indent,eol,start
 set laststatus=2
 set scrolloff=10
 set incsearch
-
+inoremap jh <Esc>
 
 autocmd BufRead,BufNewFile *.c,*.h set smartindent
 
@@ -95,4 +95,3 @@ let g:ctrlp_working_path_mode = 0
 
 "ctrlsf"
 cabbrev cs CtrlSF
-
