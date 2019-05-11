@@ -41,12 +41,13 @@ set hlsearch
 set ruler
 set term=xterm-256color
 set cursorline
-colorscheme molokai
 let g:rehash256 = 1
 set backspace=indent,eol,start
 set laststatus=2
 set scrolloff=10
 set incsearch
+
+colorscheme molokai
 
 autocmd BufRead,BufNewFile *.c,*.h set smartindent
 
