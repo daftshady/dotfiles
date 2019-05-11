@@ -41,13 +41,13 @@ set hlsearch
 set ruler
 set term=xterm-256color
 set cursorline
-let g:rehash256 = 1
+colorscheme molokai
+"let g:rehash256 = 1
 set backspace=indent,eol,start
 set laststatus=2
 set scrolloff=10
 set incsearch
 
-colorscheme molokai
 
 autocmd BufRead,BufNewFile *.c,*.h set smartindent
 
@@ -60,14 +60,17 @@ if version >= 702
   end
 
 "Remove trailing whitespace
-autocmd BufWritePre *.py,*.cpp,*.c,*.cc,*.js :%s/\s\+$//e
+autocmd BufWritePre *.py,*.cpp,*.c,*.cc,*.h,*.hpp :%s/\s\+$//e
 
 "Remove tab
 autocmd BufWritePre *.py :%s/\t/    /e
 
+"Fix python indent
+autocmd FileType python setlocal et cinwords=if,elif,else,for,while,try,except,finally,def,class
+
 "line length limit"
-au BufWinEnter *.py,*.js,*.c,*.cc,*.cpp let w:m1=matchadd('Search', '\%<81v.\%>79v', -1)
-au BufWinEnter *.py,*.js,*.c,*.cc,*.cpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+au BufWinEnter *.py,*.cpp,*.c,*.cc,*.h,*.hpp let w:m1=matchadd('Search', '\%<81v.\%>79v', -1)
+au BufWinEnter *.py,*.cpp,*.c,*.cc,*.h,*.hpp let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
 "Tab highlighting"
 function! HiTabs()
@@ -92,3 +95,4 @@ let g:ctrlp_working_path_mode = 0
 
 "ctrlsf"
 cabbrev cs CtrlSF
+
