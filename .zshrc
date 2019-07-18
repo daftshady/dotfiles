@@ -101,25 +101,22 @@ setopt menu_complete
 plugins=(… zsh-completions)
 autoload -U compinit && compinit
 
-alias python3=python3.7
-alias pip3=pip3.7
+alias python3=python3.6
+alias pip3=pip3.6
 
 alias vol=/media/vol
-
-source /opt/ros/kinetic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
 
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export CUDA_PATH=/usr/local/cuda
 export CUDA_HOME=/usr/local/cuda-10.0
-export LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib/openmpi:$CUDA_PATH/lib64:$LD_LIBRARY_PATH
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-alias trago="python3 launch.py --debug=True --autoreload=True"
-alias segtrain="python3 -m perception.segmentation.run_segmentation_training"
+alias trago="python3.6 launch.py --debug=True --autoreload=True"
+alias ta="tmux attach"
 
 # -- Improved X11 forwarding through GNU Screen (or tmux).
 # If not in screen or tmux, update the DISPLAY cache.
