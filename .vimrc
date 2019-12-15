@@ -94,3 +94,17 @@ let g:ctrlp_working_path_mode = 0
 
 "ctrlsf"
 cabbrev cs CtrlSF
+
+augroup vimrc_todo
+    au!
+    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|XXX)/
+          \ containedin=.*Comment,vimCommentTitle
+augroup END
+hi def link MyTodo Todo
+
+"Workaround for slow vim in old macbook
+let g:loaded_matchparen = 1
+let g:ycm_echo_current_diagnostic = 0
+set re=1
+set ttyfast
+set lazyredraw
