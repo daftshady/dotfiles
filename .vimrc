@@ -103,8 +103,6 @@ augroup END
 hi def link MyTodo Todo
 
 "Workaround for slow vim in old macbook
-let g:loaded_matchparen = 1
-let g:ycm_echo_current_diagnostic = 0
 set re=1
 set ttyfast
 set lazyredraw
