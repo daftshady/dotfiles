@@ -51,7 +51,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
+plugins=(git tmux zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,12 +84,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export LD_LIBRARY_PATH=/home/ilsu/dev/Ipopt-3.12.9/lib:$LD_LIBRARY_PATH
 alias ns=nvidia-smi
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ilsu/.vimpkg/bin
-echo -ne "\e]1;Mars\a"
-alias py=python3
 
 alias gs="git status"
 alias gd="git diff"
@@ -106,26 +103,10 @@ alias pip3=pip3.6
 
 alias vol=/media/vol
 
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export CUDA_PATH=/usr/local/cuda
-export CUDA_HOME=/usr/local/cuda-10.0
+export CUDA_HOME=/usr/local/cuda-10.2
 export LD_LIBRARY_PATH=/usr/local/lib/openmpi:$CUDA_PATH/lib64:$LD_LIBRARY_PATH
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-alias trago="python3.6 launch.py --debug=True --autoreload=True"
-alias ta="tmux attach"
-
-# -- Improved X11 forwarding through GNU Screen (or tmux).
-# If not in screen or tmux, update the DISPLAY cache.
-# If we are, update the value of DISPLAY to be that in the cache.
-# This is run before every command.
-function preexec() {
-    if [ -z "$STY" -a -z "$TMUX" ]; then
-        echo $DISPLAY > ~/.display.txt
-    else
-        export DISPLAY=`cat ~/.display.txt`
-    fi
-}
+export PATH=/usr/local/cuda/bin:$GOPATH/bin:$GOROOT/bin:$PATH
