@@ -101,7 +101,7 @@ cabbrev cs CtrlSF
 
 augroup vimrc_todo
     au!
-    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|OPTIMIZE|XXX)/
+    au Syntax * syn match MyTodo /\v<(FIXME|NOTE|TODO|HACK|OPTIMIZE|XXX)/
           \ containedin=.*Comment,vimCommentTitle
 augroup END
 hi def link MyTodo Todo
