@@ -18,6 +18,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'cstrahan/vim-capnp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
