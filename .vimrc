@@ -35,6 +35,7 @@ set shiftwidth=4
 
 autocmd Filetype cpp setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
 autocmd Filetype c setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
+autocmd Filetype cuda setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
 
 set nu
 set autoindent
