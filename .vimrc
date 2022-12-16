@@ -16,7 +16,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'editorconfig/editorconfig-vim'
 " sudo apt-get install ack-grep "
 Plugin 'dyng/ctrlsf.vim'
-Plugin 'sheerun/vim-polyglot'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cstrahan/vim-capnp'
 
