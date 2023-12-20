@@ -109,8 +109,3 @@ augroup vimrc_todo
           \ containedin=.*Comment,vimCommentTitle
 augroup END
 hi def link MyTodo Todo
-
-"Workaround for slow vim in old macbook
-set re=1
-set ttyfast
-set lazyredraw
