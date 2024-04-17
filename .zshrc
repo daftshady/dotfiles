@@ -85,6 +85,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+precmd() {
+    psvar[1]=$TNAME:t
+}
+PS1=$'\n'"%F{blue}[ %F{green}%n%F{white}@%F{yellow}%m%F{white}:%F{cyan}%d %F{blue}]"$'\n'
+PS1+="%F{cyan}(%1v) %F{white}:> "
+
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit"
