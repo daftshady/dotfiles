@@ -85,29 +85,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ns=nvidia-smi
-
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ilsu/.vimpkg/bin
-
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit"
-
-setopt menu_complete
-
-# For zsh-completions
-plugins=(… zsh-completions)
-autoload -U compinit && compinit
-
-alias python3=python3.6
-alias pip3=pip3.6
-
-alias vol=/media/vol
-
-export CUDA_PATH=/usr/local/cuda
-export CUDA_HOME=/usr/local/cuda-10.2
-export LD_LIBRARY_PATH=/usr/local/lib/openmpi:$CUDA_PATH/lib64:$LD_LIBRARY_PATH
-
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=/usr/local/cuda/bin:$GOPATH/bin:$GOROOT/bin:$PATH
