@@ -85,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export TNAME=kimchi0
 precmd() {
     psvar[1]=$TNAME:t
 }
