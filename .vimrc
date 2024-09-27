@@ -1,29 +1,21 @@
-"Vundle starts"
+call plug#begin()
 
-set nocompatible
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" List your plugins here
+Plug 'tpope/vim-sensible'
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'mtdl9/vim-log-highlighting'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'editorconfig/editorconfig-vim'
-" sudo apt-get install ack-grep "
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'cstrahan/vim-capnp'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'mtdl9/vim-log-highlighting'
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe', { 'commit': 'd2abd1594f228de79a05257fc5d4fca5c9a7ead3' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'cstrahan/vim-capnp'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin on
-
-"Vundle ends"
+call plug#end()
 
 "Tab size"
 set ts=4
