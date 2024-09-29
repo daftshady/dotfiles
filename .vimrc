@@ -2,10 +2,6 @@
 
 call plug#begin()
 
-" List your plugins here
-Plug 'tpope/vim-sensible'
-
-" let Vundle manage Vundle, required
 Plug 'mtdl9/vim-log-highlighting'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe', { 'commit': 'd2abd1594f228de79a05257fc5d4fca5c9a7ead3' }
@@ -18,6 +14,7 @@ Plug 'cstrahan/vim-capnp'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
+filetype indent off
 
 "Tab size"
 set ts=4
