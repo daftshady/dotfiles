@@ -17,17 +17,13 @@ call plug#end()
 filetype indent off
 
 "Tab size"
-set ts=4
+set ts=2
 set expandtab
-set sw=4
-set softtabstop=4
-set shiftwidth=4
+set sw=2
+set softtabstop=2
+set shiftwidth=2
 
-autocmd Filetype cpp setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
-autocmd Filetype c setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
-autocmd Filetype cuda setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
-autocmd Filetype sh setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
-autocmd FileType javascript,html,css setlocal expandtab ts=2 softtabstop=2 shiftwidth=2
+autocmd Filetype python setlocal ts=4 sw=4 softtabstop=4 shiftwidth=4
 
 set nu
 set autoindent
