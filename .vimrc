@@ -7,7 +7,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe', { 'commit': 'd2abd1594f228de79a05257fc5d4fca5c9a7ead3' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'dyng/ctrlsf.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'cstrahan/vim-capnp'
